@@ -1,0 +1,66 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'home.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <title>Instagram</title>
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <div class="header_left">
+          <img
+            src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png"
+            alt=""
+          />
+        </div>
+
+        <div class="header_middle">
+          <i class="fas fa-search"></i>
+          <input type="text" placeholder="Search" />
+        </div>
+
+        <div class="header_right">
+          <i class="fas fa-home"></i>
+          <i class="fal fa-paper-plane"></i>
+          <i class="fal fa-plus plus"></i>
+          <i class="fal fa-compass"></i>
+          <i class="fal fa-heart"></i>
+          <i class="fal fa-user-tie"></i>
+        </div>
+      </nav>
+
+      <main>
+        {% for i in object_list %}
+        <div class="post">
+          <div class="post_header">
+            <p>{{ i.username }}</p>
+            <i class="fal fa-align-justify"></i>
+          </div>
+
+          <img src="{{ i.img_url }}" alt="" />
+
+          <div class="post_btn">
+            <i class="fal fa-heart"></i>
+            <i class="fal fa-comments"></i>
+            <i class="fal fa-paper-plane"></i>
+            <i class="fal fa-flag flag"></i>
+          </div>
+
+          <p>{{ i.description }}</p>
+        </div>
+        {% endfor %}
+      </main>
+    </div>
+  </body>
+</html>

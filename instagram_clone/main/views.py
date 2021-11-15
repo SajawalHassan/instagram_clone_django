@@ -1,4 +1,7 @@
-from django.shortcuts import render
+from django.views.generic import ListView
+from .models import Post
 
-def header(req):
-    return render(req, 'header.html', {})
+class HomeView(ListView):
+    model = Post
+    template_name = 'home.html'
+    ordering = ['-id']

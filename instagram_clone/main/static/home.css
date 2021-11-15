@@ -1,0 +1,125 @@
+* {
+  font-family: sans-serif;
+}
+
+:root {
+  --border-color: #dbdbdb;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border-color);
+  padding: 10px 20px;
+}
+
+.header_left {
+  cursor: pointer;
+}
+
+.header_middle {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--border-color);
+  border-radius: 3px;
+  padding: 5px;
+  gap: 6px;
+}
+
+.header_middle > input {
+  border: none;
+  outline: none;
+  flex: 1;
+}
+
+.header_middle > i {
+  color: #cbcccd;
+  font-size: 10px;
+}
+
+.header_right > i {
+  cursor: pointer;
+  font-size: 20px;
+  margin: 0 5px;
+}
+
+.header_right > .plus {
+  padding: 0.5px 2px;
+  border: 1px solid black;
+  border-radius: 7px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  display: grid;
+  place-content: center;
+}
+
+.post {
+  margin-top: 3rem;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  position: relative;
+  width: max-content;
+}
+
+.post > .post_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 10px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.post > .post_header > p {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.post > .post_header > p:hover {
+  text-decoration: underline;
+}
+
+.post > .post_header > i {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.post > img {
+  width: 35rem;
+}
+
+.post > .post_btn {
+  margin-top: 10px;
+}
+
+.post > .post_btn > i {
+  font-size: 1.5em;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.post > .post_btn > .flag {
+  position: absolute;
+  right: 1rem;
+}
+
+@media (max-width: 502px) {
+  .header_middle {
+    display: none;
+  }
+}
+
+@media (min-width: 1000px) {
+  .header {
+    padding: 10px 10rem;
+  }
+}
+
+@media (max-width: 571px) {
+  .header_middle {
+    max-width: 8rem;
+  }
+}
