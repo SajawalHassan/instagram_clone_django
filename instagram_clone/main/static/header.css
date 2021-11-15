@@ -1,0 +1,46 @@
+* {
+  font-family: sans-serif;
+}
+
+:root {
+  --border-color: #dbdbdb;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border-color);
+  padding: 10px 20px;
+}
+
+.header_middle {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--border-color);
+  border-radius: 3px;
+  padding: 5px;
+  gap: 6px;
+}
+
+.header_middle > input {
+  border: none;
+  outline: none;
+}
+
+.header_middle > i {
+  color: #cbcccd;
+  font-size: 10px;
+}
+
+.header_right > i {
+  cursor: pointer;
+  font-size: 20px;
+  margin: 0 5px;
+}
+
+.header_right > .plus {
+  padding: 0.5px 2px;
+  border: 1px solid black;
+  border-radius: 7px;
+}

@@ -1,0 +1,42 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'header.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <title>Instagram</title>
+  </head>
+  <body>
+    <div class="header">
+      <div class="header_left">
+        <img
+          src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png"
+          alt=""
+        />
+      </div>
+
+      <div class="header_middle">
+        <i class="fas fa-search"></i>
+        <input type="text" placeholder="Search" />
+      </div>
+
+      <div class="header_right">
+        <i class="fas fa-home"></i>
+        <i class="fal fa-paper-plane"></i>
+        <i class="fal fa-plus plus"></i>
+        <i class="fal fa-compass"></i>
+        <i class="fal fa-heart"></i>
+        <i class="fal fa-user-tie"></i>
+      </div>
+    </div>
+  </body>
+</html>
